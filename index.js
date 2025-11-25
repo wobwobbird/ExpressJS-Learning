@@ -11,6 +11,13 @@ app.get('/', (req, res) => {
 });
 
 //start server
-app.listen(PORT, () => {
-    console.log(`Server is runninggggg on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Server is runninggggg on http://localhost:${PORT}`);
+// });
+try {
+    app.listen(PORT, () => {
+        console.log(`Server is runninggggg on http://localhost:${PORT}`);
+    });
+} catch (error) {
+    console.error('Failed to start server:', error);
+}
